@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Survival of the Fittest </title>
+  
+      
+  </head>
+  
+  
+<body>
+  
+  
+  <script>
+      
+    //Startup and Character Creation
+    
+    
+        var playerTag = prompt ("What's your name, friend?");
+    
+      
+        
+            startOfMisery()
+            
+        // add something else cool here
+    
+    //leggo boys
+            
+    
+        function startOfMisery() 
+    
+    
+        {
+      
+          alert("Welcome to Survival of the Fittest, " + playerTag + "!");
+         
+          alert("This experience isn't meant to hold your hand. Your chance of survival is purely based off of your ability to predict outcomes of dangerous situations...");
+          
+          alert("Sound unfair?");
+          
+          alert("Too bad.")
+        
+          alert(playerTag + ". You will die. A lot.");           
+    
+           
+          
+            }
+  </script>
+
+</body>
+  
+  
+  
+  
+</html>
