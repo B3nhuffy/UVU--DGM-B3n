@@ -43,25 +43,17 @@
           
             
           
-          //what the hell
+          //just a test need to use a function
           
-          var listo = prompt("Are you ready?");
-
-                if(listo == "yes"){
-                    alert("Then let's begin");
-}
-                 
-                 // put the function in here else{
-                    //alert("Not ready, you have died.");
-  }
+      var possibleDeath = prompt("You will die. Write kappa.");
           
-          intro()
-        }
-      function intro()
-    {
-      alert("The year is 2018. The world has plunged into chaos after various countries have gone to war and the remains of mankind are spread across the earth.");
-      
-      alert("It's nearing nighttime. You have a rifle and a backpack with almost no food or water.");
+          if(possibleDeath == "kappa"){
+            alert("You live");
+          }
+          else{
+            alert("You died");
+          }
+        
         
     }
         
