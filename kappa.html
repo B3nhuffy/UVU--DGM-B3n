@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Adventure Game</title>
+
+</head>
+<body>
+        <script>
+            alert("Adventure time of doom!");
+            var player = prompt("What is your name?");
+            var gameStart = confirm(player + " are you ready for an adventure?");
+            
+            if(gameStart){
+                game();
+                }
+            else{
+                endGame();
+            }
+
+
+            function game(){
+                var path1 = prompt("Lets fly away. Fly away? (Yes or no)");
+                if(path1 == "Yes"){
+                    alert("LET'S GO BABY")
+                }
+                else{
+                    alert("ugh ugh ugh")
+                }
+            }
+
+
+
+            function endGame(){
+                alert("goodbye bitch");
+            }
+</body>
+</html>
