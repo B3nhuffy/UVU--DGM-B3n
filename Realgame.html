@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Choose Wisely </title>
+
+      
+  </head>
+  
+  
+<body>
+  
+  
+  <script>
+
+    //*************press f1 then open in browser****************
+      
+    //Startup and Character Creation
+    
+    
+      var playerTag = prompt ("What's your name, friend?");
+
+      var playerRace = prompt ("What race are you? (Vampire, Elf, Human)");
+
+        if (playerRace == "Vampire") {
+          vampireStart();
+          }
+          else if(playerRace == "Elf") {
+            elfStart();   }
+            else if(playerRace == "Human"){
+              humanStart();
+            }
+            else {
+              whyThough();
+            }
+        
+      //different story starts
+ 
+    
+       function vampireStart()
+       {
+         alert("Welcome " + playerTag + "! You're a vampire who is ******. Keep in mind that you're much more resilient to physical harm than other races. However, due to being a vampire, you may scare other characters. Make sure you plan accordingly.");
+         
+         var vReady = confirm("Are you ready to begin?");
+
+         if(vReady == true) {
+           startGame();
+         }
+         else {
+           alert("Too bad!")
+           startGame();
+         }
+       }
+    
+       function elfStart() 
+    
+        {
+      
+          alert("Welcome " + playerTag + "! You're an elf who is ******. Keep in mind that you're much quicker than other races. However, due to being an elf, you may be distrusted by humans. Other elves will tend to help you though!");
+         
+          var eReady = confirm("Are you ready to begin?");
+
+         if(eReady == true) {
+           startGame();
+         }
+         else {
+           alert("Too bad!")
+           startGame();
+         }
+         
+        } 
+
+           function humanStart()
+
+          {
+      
+          alert("Welcome " + playerTag + "! You're a human who is ******. Keep in mind that you're much stronger than other races. However, due to being a human, you may be distrusted by elves and other creatures. Humans will tend to help you though!");
+         
+          var hReady = confirm("Are you ready to begin?");
+
+         if(hReady == true) {
+           startGame();
+         }
+         else {
+           alert("Too bad!")
+           startGame();
+         }
+         
+        } 
+
+          function startGame() {
+
+          alert("AYYYYYYYYYYYYYYYYYYy");
+          }
+          //for those less... able than others
+
+          function whyThough()
+          {
+            alert("Typing is hard.")
+          }
+
+
+                        
+        
+          
+          //just a test need to use a function
+        
+        
+    
+        
+    
+        
+           
+  </script>
+
+</body>
+  
+  
+  
+  
+</html>
