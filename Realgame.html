@@ -150,8 +150,31 @@
           }
 
           function signV()  {
-            alert("plz?");
+            var journeyS = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. Which do you travel towards? (Village, Tower, Forest, Mountains)");
+
+            if (journeyS === "Village") {
+              alert("You apparently forgot something and have to deal with the shame of going back to the village...");
+              villageBegin();
+            }
+
+            else if (journeyS === "Tower") {
+              alert("RIP");
+            }
+
+            else if (journeyS === "Forest") {
+              alert("You get high af!");
+            }
+
+            else if (journeyS === "Mountains") {
+              alert("Don't jump off and die!'");
+            }
+
+            else{
+              whyThough();
+            }
           }
+            
+
           
           
              
