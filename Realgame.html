@@ -89,18 +89,72 @@
 
         function whyThough()
           {
-             alert("Typing is hard.")
+             alert("Typing is hard. You lose! :D")
           }
 
          function startGame() {
 
               alert("After a long trek, you come to the entrance of the closest village, Sagetown.");
 
-            var townSquare prompt("As you walk deeper into the village, you see a variety of different shop, such as a blacksmith, a bar, and a bakery. There's also a large town square. Where do you go? (Blacksmith, Bar, bakery, Town Square)");
+              if (playerRace === "Vampire") {
+
+               var vVillage = confirm("You feel uneasy at the thought of meeting up with humans for the first time since your change. Go towards the village anyways?");
+
+                    if(vVillage == true) {
+
+                      villageBegin();}
+
+                    else  {
+
+                      alert("You bow out like a coward...")
+                      
+                      signV();
+
+                    }
+
+              }
+
+              else{
+                villageBegin();
+              }
+              
+              }
+          
+          function villageBegin() {
+
+            vEntrance = prompt("You start to walk into the village and notice four points of interest. A blacksmith, an inn, the town square and rundown shack. Which would you like to go to? (Blacksmith, Inn, Square, Shack)");
+
+            if (vEntrance === "Blacksmith") {
+              alert("You walk towards the blacksmith as you hear the sound of metal being hammered.")
+
+
+            }
+
+            else if (vEntrance === "Inn") {
+
+            }
+
+            else if (vEntrance === "Square"){
+
+            }
+
+            else if (vEntrance === "Shack"){
+
+            }
+             
+            else {
+              whyThough();
+            }
+
+
           }
-                  if (townSquare == "Blacksmith"){
-            
+
+          function signV()  {
+            alert("plz?");
           }
+          
+          
+             
           
           
 
