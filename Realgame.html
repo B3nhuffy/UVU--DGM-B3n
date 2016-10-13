@@ -21,6 +21,8 @@
 
       var playerRace = prompt ("What race are you? (Vampire, Elf, Human)");
 
+      //just directing to different parts
+
         if (playerRace == "Vampire") {
           vampireStart();
           }
@@ -87,10 +89,14 @@
          
         } 
 
+        //For people who suck at typing
+
         function whyThough()
           {
-             alert("Typing is hard. You lose! :D")
+             alert("Typing really isn't that hard... You lose! :D")
           }
+
+        //Beginning of game
 
          function startGame() {
 
@@ -122,15 +128,36 @@
           
           function villageBegin() {
 
-            vEntrance = prompt("You start to walk into the village and notice four points of interest. A blacksmith, an inn, the town square and rundown shack. Which would you like to go to? (Blacksmith, Inn, Square, Shack)");
+            vEntrance = prompt("In the village there are four points of interest. A blacksmith, an inn, the town square and rundown shack. You can also choose to go back to the sign. Where would you like to go to? (Blacksmith, Inn, Square, Shack, Sign)");
 
             if (vEntrance === "Blacksmith") {
-              alert("You walk towards the blacksmith as you hear the sound of metal being hammered.")
+              alert("You walk towards the blacksmith as you hear the harsh sounds of metal being hammered into shape.");
 
+                if (playerRace === "Vampire") {
+                  var killBlacksmith = prompt("The blacksmith falls back in suprise as you walk in. He immediately grabs a sword and comes at you! What do you do? (Attack, Run)");
+
+                  if (killBlacksmith === "Attack") {
+                    alert("You swing your hand at the blacksmith, only trying to shield yourself from the sword. You hit the blacksmith square in the chest and send him into the wall! Horrified at what you've done, you run out of the shop.");
+
+                    alert("You quickly run out of the village before anyone notices what happened!");
+
+                    signV();
+                  }
+
+                  else if (killBlacksmith === "Run") {
+                    alert("You flee the blacksmith, swinging the door closed behind you! You quickly exit the village before he can follow you!");
+                    signV();
+                  }
+                }
+
+                alert("The blacksmith looks up from his forge and asks, \"Welcome. What's your name traveler?\" \"My name is " + playerTag +"!\" Welcome to my forge, what catches your fancy?");
+
+              alert("You look at the wall of assorted weaponry and armor. You decide to either purchase a curved sword or a breastplate.");
 
             }
 
             else if (vEntrance === "Inn") {
+
 
             }
 
@@ -141,6 +168,10 @@
             else if (vEntrance === "Shack"){
 
             }
+
+            else if(vEntrance === "Sign"){
+              signV();
+            }
              
             else {
               whyThough();
@@ -149,17 +180,24 @@
 
           }
 
+          //"Crossroads" section
+
           function signV()  {
             var journeyS = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. Which do you travel towards? (Village, Tower, Forest, Mountains)");
 
             if (journeyS === "Village") {
               alert("You apparently forgot something and have to deal with the shame of going back to the village...");
-              villageBegin();
-            }
 
+               /* WAIT FOR PRESTON if(killBlacksmith === "Attack") {
+                alert("You walk back to the village and the villagers swarm you with garlic! Ah. The sweet release of death...")
+              } */  }
+             else { villageBegin();
+             } 
+            
+             
             else if (journeyS === "Tower") {
               alert("RIP");
-            }
+            } 
 
             else if (journeyS === "Forest") {
               alert("You get high af!");
