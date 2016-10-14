@@ -21,6 +21,8 @@
 
       var playerRace = prompt ("What race are you? (Vampire, Elf, Human)");
 
+      var chooseWeapon = prompt("Choose your equipment (Armor or Sword)");
+
       //just directing to different parts
 
         if (playerRace == "Vampire") {
@@ -87,14 +89,8 @@
            startGame();
          }
          
-        } 
+        }
 
-        //For people who suck at typing
-
-        function whyThough()
-          {
-             alert("Typing really isn't that hard... You lose! :D")
-          }
 
         //Beginning of game
 
@@ -128,45 +124,82 @@
           
           function villageBegin() {
 
-            vEntrance = prompt("In the village there are four points of interest. A blacksmith, an inn, the town square and rundown shack. You can also choose to go back to the sign. Where would you like to go to? (Blacksmith, Inn, Square, Shack, Sign)");
+           var vEntrance = prompt("In the village there are three points of interest. An inn, the town square and rundown shack. You can also choose to go back to the sign. Where would you like to go to? (Inn, Square, Shack, Sign)");
 
-            if (vEntrance === "Blacksmith") {
-              alert("You walk towards the blacksmith as you hear the harsh sounds of metal being hammered into shape.");
+            if (vEntrance === "Inn") {
 
-                if (playerRace === "Vampire") {
-                  var killBlacksmith = prompt("The blacksmith falls back in suprise as you walk in. He immediately grabs a sword and comes at you! What do you do? (Attack, Run)");
+              if (playerRace === "Vampire") {
 
-                  if (killBlacksmith === "Attack") {
-                    alert("You swing your hand at the blacksmith, only trying to shield yourself from the sword. You hit the blacksmith square in the chest and send him into the wall! Horrified at what you've done, you run out of the shop.");
+                alert("You walk into a busy bar, with a constant murmur throughout. You hide your face beneath your cloak to avoid being seen.");
 
-                    alert("You quickly run out of the village before anyone notices what happened!");
+                var vFight = confirm("The bartender looks in your direction, squinting his eyes. You try to avoid his gaze, but he notices your blood-red eyes and his eyes widen with surprise. He calls out to the rest of the men in the bar. Do you fight them?");
 
-                    signV();
+                if (vFight == true) {
+                  alert("You prepare yourself as the first man comes at you. Suddenly, you're gripped with a feral instinct and you throw a vicious punch! As if made of paper, the man flies across the room and slams into a table, effectively destroying it and also slamming into the wall.");
+
+                  alert("The other men come at you viciously and you dispose of them in a similar fashion. You crack a devilish smile and take a step over the dead bodies, feeling very confident about your new abilities.");
+
+                  signBad();
+                }
+                else {  
+                    
+                    alert("You decide to be a huge disappointment to your mom and leave the bar in shame.");
+
+                    signBad();
+
                   }
 
-                  else if (killBlacksmith === "Run") {
-                    alert("You flee the blacksmith, swinging the door closed behind you! You quickly exit the village before he can follow you!");
-                    signV();
-                  }
                 }
 
-                alert("The blacksmith looks up from his forge and asks, \"Welcome. What's your name traveler?\" \"My name is " + playerTag +"!\" Welcome to my forge, what catches your fancy?");
+              }       
 
-              alert("You look at the wall of assorted weaponry and armor. You decide to either purchase a curved sword or a breastplate.");
+              else 
+              
+                  { alert("You walk into the bar and scan the room. You notice the bartender eyeing you and a shady figure in the back.");
 
-            }
+                    var npcChoice = confirm("You start walking into the bar but suddenly a beer bottle smashes into the back of your head! You see a man, clearly drunk, smiling smugly at you. Do you fight back?"); 
 
-            else if (vEntrance === "Inn") {
+                  if (npcChoice == true) {
 
+                    alert("You punch the man square in the jaw and he stumbles back into a table, and another group of men begins to pummel the man mercilessly. You turn to leave, but the sketchy man is suddenly next to you.");
 
-            }
+                    alert("\"Remember my friend, the key is the cabinet. Don't forget.\"");
 
-            else if (vEntrance === "Square"){
+                    alert("The man slowly goes back to his corner and you walk back out into the square.");
 
+                    villageBegin();
+
+                  }
+
+                  else {
+                    
+                    alert("You decide to be a huge disappointment to your mom and leave the bar in shame.");
+
+                    villageBegin();
+                  }
+            
+              }
+
+          
+
+            if (vEntrance === "Square") {
+                
+              if (playerRace === "Vampire") {
+
+                alert("You walk into the square and notice that there's a cult formed. They were all holding a small object in their hands.");
+
+                alert("You push your way to the front of the group and the group begins to pelt you with the objects they're holding. Garlic... You feel weak as you start to black out... Garlic. What a way to go.");
+
+                  allDeath();
+
+              }
+              else{
+                "You walk in and fun times"
+              }
             }
 
             else if (vEntrance === "Shack"){
-
+                hoboDeath();
             }
 
             else if(vEntrance === "Sign"){
@@ -177,8 +210,10 @@
               whyThough();
             }
 
-
           }
+
+          
+          
 
           //"Crossroads" section
 
@@ -186,15 +221,19 @@
             var journeyS = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. Which do you travel towards? (Village, Tower, Forest, Mountains)");
 
             if (journeyS === "Village") {
+
               alert("You apparently forgot something and have to deal with the shame of going back to the village...");
+
+                villageBegin();
+
             }
 
             //put ifs and else ifs in here
                /* check example online if(killBlacksmith === "Attack") {
                 alert("You walk back to the village and the villagers swarm you with garlic! Ah. The sweet release of death...")
-              } */  
+              } 
              else { villageBegin();
-             } 
+             }  */
           
             
              
@@ -214,25 +253,74 @@
               whyThough();
             }
           }
-            
 
-          
-          
-             
-          
+          function signBad() {
+        
+            var journey2 = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. However, you're choices have made it so you can't go back to the village without fearing for your life. Which do you travel towards? (Tower, Forest, Mountains)");
           
 
+          if (journey2 === "Tower") {
+              alert("RIP");
+            } 
+
+            else if (journey2 === "Forest") {
+              alert("You get high af!");
+            }
+
+            else if (journey2 === "Mountains") {
+              alert("Don't jump off and die!'");
+            }
+
+            else{
+              whyThough();
+            }
+          }
 
 
-                        
+                    
         
           
           
         
+
+
+        //Game over functions
         
     
-        
-    
+        function hoboDeath () {
+          var dieOrRun = prompt("You walk up to the shack and the door slowly creaks open. You see a corpse sitting on a chair, which had clearly been there for quite some time. Will you touch the corpse or leave? (Touch or Leave)");
+
+          if (dieOrRun === "Touch") {
+            alert("A chill runs through your spine as you touch the corpse, and a green mist begins to pour out of the corpse. It begins to envelop you and as you try to pull away, you realize you can't pull away!");
+
+            alert("You slowly start to black out. When you wake up, you realize you're stuck in the chair. With no ability to move, you wait until the next unfortunate traveler to take your place.");
+
+            alert("Game over.")
+          }
+          
+          else if (dieOrRun === "Leave") {
+
+            alert("You decide to be a wimp and back out of the door.");
+
+            vEntrance();
+          }
+
+          else {
+            whyThough;
+          }
+        }
+
+        //For people who suck at typing
+
+        function allDeath () {
+
+          alert("Game Over");
+        }
+
+        function whyThough()
+          {
+             alert("Typing really isn't that hard... You lose! :D")
+          }
         
            
   </script>
