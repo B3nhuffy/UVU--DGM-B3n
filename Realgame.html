@@ -42,7 +42,8 @@
     
        function vampireStart()
        {
-         alert("Welcome " + playerTag + "! You're a newly transformed vampire who is seeking revenge against the vampire who changed you. Keep in mind that you're much faster and stronger than all the other races. However, due to being a vampire, other characters will most likely dislike you. Make sure you plan accordingly.");
+         alert("Welcome " + playerTag + "! You're a newly transformed vampire who is seeking revenge against the vampire who changed you. You don't remember much of your life before your transformation but it's common knowledge that there's a creature called the Vampire King that resides in a dark tower with dark clouds surrounding it..."); 
+         alert ("Keep in mind that you're much faster and stronger than all the other races. However, due to being a vampire, other characters will most likely dislike you. Make sure you plan accordingly.");
          
            var vReady = confirm("Are you ready to begin?");
 
@@ -59,7 +60,8 @@
     
         {
       
-          alert("Welcome " + playerTag + "! You're an elf who has been kicked out of your town for continually fighting with the members of your community. Determined to prove yourself, you set out to find your place in this new, wide world.  Keep in mind that you're quicker than humans and more charming than the other races. However, due to being an elf, you're not as strong. Remember that members of your own race are more likely to help you!");
+          alert("Welcome " + playerTag + "! You're an elf who has been kicked out of your town for continually causing disturbances with the members of your community. Determined to prove yourself, you set out to claim the ultimate prize; the tower of the Vampire King.");
+          alert("Keep in mind that you're quicker than humans and more charming than the other races. However, due to being an elf, you're not as strong as the other races. Remember that members of your own race are more likely to help you!");
          
           var eReady = confirm("Are you ready to begin your adventure?");
 
@@ -77,7 +79,8 @@
 
           {
       
-          alert("Welcome " + playerTag + "! You're a human who has been trapped on your family farm your entire life. Sickened by the thought that you might be stuck there until you die, you take what little you can carry and set out on your new adventure. Keep in mind that you're stronger than elves and will get along with almost all humans. However, due to being a human, you may be distrusted by elves and other creatures.");
+          alert("Welcome " + playerTag + "! You're a human who has been trapped on your family farm your entire life. Sickened by the thought that you might be stuck there until you die, you take what little you can carry and set out on your new adventure. You've heard stories of the dreaded Vampire King... What better way to stake your claim on this world than to capture the tower for yourself?!");
+          ("Keep in mind that you're stronger than elves and will get along with almost all humans. However, due to being a human, you may be distrusted by elves and other creatures.");
          
             var hReady = confirm("Are you ready to begin?");
 
@@ -100,7 +103,7 @@
 
               if (playerRace === "Vampire") {
 
-               var vVillage = confirm("You feel uneasy at the thought of meeting up with humans for the first time since your change. Go towards the village anyways?");
+               var vVillage = confirm("You feel uneasy at the thought of meeting up with humans for the first time since your change into a vampire. Go towards the village anyways?");
 
                     if(vVillage == true) {
 
@@ -163,7 +166,7 @@
 
                     alert("You punch the man square in the jaw and he stumbles back into a table, and another group of men begins to pummel the man mercilessly. You turn to leave, but the sketchy man is suddenly next to you.");
 
-                    alert("\"Remember my friend, the key is the cabinet. Don't forget.\"");
+                    alert("\"Remember my friend, the key is the time. Time is the key. Don't forget.\"");
 
                     alert("The man slowly goes back to his corner and you walk back out into the square.");
 
@@ -197,11 +200,26 @@
                   allDeath();
 
               }
-              else{
-                "You walk in and fun times"
+              else {
+                alert("You walk into the busy square. The streets are bustling with activity and you take a couple of moments to enjoy the company of a few merchants and some time basking in the sun.");
+
+                var stayOrLeave = prompt("The peaceful nature of the market appeals to you. However, you realize that you must leave at some point. Stay for a night or leave? (Stay or Leave)");
+
+                if (stayOrLeave === "Stay"){
+                  alert("You decide to stay the night at a nearby inn. You slowly drift off to sleep in your warm bed and dream of your grand adventure ahead of you.");
+
+                  alert("You wake up refreshed in the morning, have a warm breakfast and wink at the innkeeper on your way out.");
+
+                  villageBegin();
+                }
+                  else {
+
+                    alert("You realize there's no time to waste and that you should be getting on with your journey. Shouldering your belongings, you head back to the entrance of the square.");
+
+                villageBegin();
               }
             }
-
+           }
             else if (vEntrance === "Shack"){
                 hoboDeath();
             }
@@ -222,7 +240,7 @@
           //"Crossroads" section
 
           function signV()  {
-            var journeyS = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. Which do you travel towards? (Village, Tower, Forest, Mountains)");
+            var journeyS = prompt ("You arrive back at the sign outside the village. In the distance you see a dense forest, snowy mountains to the north and the village behind you. You can also see the Vampire Kings fortress, but you feel that you aren't ready to handle that task quite yet. Which do you travel towards? (Village, Forest, Mountains, Tower)");
 
             if (journeyS === "Village") {
 
@@ -232,7 +250,7 @@
 
             }
 
-            //put ifs and else ifs in here
+            //Possibly trashing this because of problem with universal variables
                /* check example online if(killBlacksmith === "Attack") {
                 alert("You walk back to the village and the villagers swarm you with garlic! Ah. The sweet release of death...")
               } 
@@ -240,19 +258,20 @@
              }  */
           
             
-             
-            else if (journeyS === "Tower") {
-              alert("RIP");
-            } 
 
             else if (journeyS === "Forest") {
-              alert("You get high af!");
+              forestJ();
             }
 
             else if (journeyS === "Mountains") {
               alert("Don't jump off and die!'");
             }
 
+            else if (journeyS === "Tower") {
+              alert("You clearly can't make good decisions can you? Go back to the sign.");
+
+              signV();
+            }
             else{
               whyThough();
             }
@@ -260,28 +279,68 @@
 
           function signBad() {
         
-            var journey2 = prompt ("You arrive back at the sign outside the village. In the distance you see the village behind you, dark clouds around a tall tower, a dense forest and snowy mountains. However, you're choices have made it so you can't go back to the village without fearing for your life. Which do you travel towards? (Tower, Forest, Mountains)");
+            var journey2 = prompt ("You arrive back at the sign outside the village. In the distance you see a dense forest, snowy mountains to the north and the village behind you. However, due to your decisions you can't go back to the village. You can also see the Vampire Kings fortress, but you feel that you aren't ready to handle that task quite yet... Which do you travel towards? (Forest, Mountains, Tower)");
           
 
-          if (journey2 === "Tower") {
-              alert("RIP");
-            } 
-
-            else if (journey2 === "Forest") {
-              alert("You get high af!");
+          if (journey2 === "Forest") {
+              forestJ();
             }
 
             else if (journey2 === "Mountains") {
               alert("Don't jump off and die!'");
             }
 
+            else if (journey2 === "Tower") {
+
+              alert("You clearly can't make good decisions can you? Go back to the sign.");
+
+              signV();
+            }
             else{
               whyThough();
             }
           }
 
 
-                    
+          function forestJ () {
+
+            alert("You begin trudging your way towards the forest. As you get closer and closer to the forest, you begin to be intimidated at the sheer size of the giant oaks and willows.");
+
+            var forestPath = alert("You get to the entrance of the forest and realize there's no path. Do you continue ahead or search the area for a path? (Continue or Search)");
+
+            if (forestPath === "Continue") {
+
+              alert("You forge ahead into the forest. ")
+            }
+
+            else if (forestPath === "Search") {
+
+              alert("d saf")
+            }
+
+
+            else{
+              whyThough();
+            }
+
+          }
+
+
+          function mountainJ () {
+
+            alert("You start your journey towards the snowy mountains");
+          }
+
+
+
+
+
+
+
+          function towerJ () {
+
+            alert("You start on your journey towards the tower.");
+          }
         
           
           
@@ -292,7 +351,8 @@
         
     
         function hoboDeath () {
-          var dieOrRun = prompt("You walk up to the shack and the door slowly creaks open. You see a corpse sitting on a chair, which had clearly been there for quite some time. Will you touch the corpse or leave? (Touch or Leave)");
+
+          var dieOrRun = prompt("You walk up to the shack and the door slowly opens ominously before you. You see a corpse sitting on a chair, which has clearly been there for quite some time. Will you touch the corpse or leave? (Touch or Leave)");
 
           if (dieOrRun === "Touch") {
             alert("A chill runs through your spine as you touch the corpse, and a green mist begins to pour out of the corpse. It begins to envelop you and as you try to pull away, you realize you can't pull away!");
@@ -306,11 +366,11 @@
 
             alert("You decide to be a wimp and back out of the door.");
 
-            vEntrance();
+            villageBegin();
           }
 
           else {
-            whyThough;
+            whyThough();
           }
         }
 
