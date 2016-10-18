@@ -229,7 +229,8 @@
             }
              
             else {
-              whyThough();
+              alert("Learn to type...");
+              villageBegin();
             }
 
           }
@@ -264,7 +265,7 @@
             }
 
             else if (journeyS === "Mountains") {
-              alert("Don't jump off and die!'");
+              mountainJ();
             }
 
             else if (journeyS === "Tower") {
@@ -287,7 +288,7 @@
             }
 
             else if (journey2 === "Mountains") {
-              alert("Don't jump off and die!'");
+              mountainJ();
             }
 
             else if (journey2 === "Tower") {
@@ -297,7 +298,9 @@
               signV();
             }
             else{
-              whyThough();
+              alert("Seriously? Learn to type...");
+
+              signBad();
             }
           }
 
@@ -306,32 +309,208 @@
 
             alert("You begin trudging your way towards the forest. As you get closer and closer to the forest, you begin to be intimidated at the sheer size of the giant oaks and willows.");
 
-            var forestPath = alert("You get to the entrance of the forest and realize there's no path. Do you continue ahead or search the area for a path? (Continue or Search)");
+            var forestPath = prompt("You get to the entrance of the forest and realize there's no path. Do you continue ahead or search the area for a path? (Continue or Search)");
 
-            if (forestPath === "Continue") {
+               if (forestPath === "Continue") {
 
-              alert("You forge ahead into the forest. ")
+                 alert("You forge ahead into the forest, confident in your ability to find your own way. ");
+
+                 alert("As you move farther and farther into the forest, you start to hear large footsteps coming from the underbrush. You look around uneasily as the footsteps get louder and louder!");
+
+                  if (playerRace === "Vampire") {
+
+                    alert("Suddenly, a ferret pops its head out of a bush, immediately followed by a long, lithe, light green figure. It reveals itself from the underbrush as a large forest drake.");
+
+                    var vampireDrake = prompt("Immediately recognizing you as a vampire and a threat, the drake rears its head back to attack! What do you do?! (Attack, Reason, Flee)");
+
+                        if (vampireDrake === "Attack") {
+
+                            alert("You viciously throw yourself at the drake, claws and fangs bared! The drake attempts to fight back, swatting at you with its long tail. You mount it, straddling its neck, and claw ferociously at its scales.");
+
+                            alert("After some time, the drake begins to become limp and crashes to the ground. You stand above the creature, chest heaving, and watch the wisdom of decades begin to drain from its eyes. The ferrets anguished cries can be heard from the underbrush. You slowly turn away, proud of your unmatched power as you slowly feel more of your humanity slip away...");
+
+                            finalSign();
+                          
+
+                        }
+
+                        else {
+
+                          alert("It doesn't matter what you chose, you just run like crazy because it's a friggan drake and you don't like ferrets all that much anyways.");
+
+                          finalSign();
+
+                        }
+
+                  }
+                  
+                  else if (playerRace === "Elf") {
+
+                    alert("Suddenly, a ferret pops out of the underbrush! As an elf, you're delighted by the creature. You start to play with it but almost immediately a large shadow cast over you...");
+
+                    var elfDrake = prompt("You slowly look up to see a large, light green forest drake towering over you. What do you do? (Attack, Run, Reason)");
+
+                        if (elfDrake === "Attack"){ 
+
+                          forestDrakeDeath();
+
+                        }
+
+                        
+
+                        else { 
+
+                          alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
+
+                          alert("\"Remember the time my young friend " + playerTag + ". The time is key.\"");
+
+                          alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
+
+                          finalSign();
+
+                        }
+                  }
+
+                  else {
+                    var humanDrake = alert("A ferret pops its head out of the underbrush. Unsure of what to do, you are undecided on how to approach this situation. What do you do? (Approach, Attack, Watch)");
+
+                    if (humanDrake === "Approach") {
+
+                      alert("You slowly approach the ferret. The large footsteps grow louder as you're about to pick it up! You flee into the undergrowth, dying to know what was following you, but never to find out.");
+
+                      finalSign();
+
+
+                    }
+
+                    else if (humanDrake === "Attack") {
+
+                      forestDrakeDeath();
+
+                    }
+                  
+                    else {
+
+                      alert("Impressed with your patience, a large, light green wyvern writhes its way out of the undergrowth.")
+
+                      alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
+
+                          alert("\"Remember the time my young friend " + playerTag + ". The time is key.\"");
+
+                          alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
+
+                          finalSign();
+
+                    }
+                    }
+
             }
 
             else if (forestPath === "Search") {
 
-              alert("d saf")
+              if (playerRace === "Elf") {
+
+              var escapeE = prompt("You get horribly lost and eventually make your way back to the elven village you left at the beginning! They decide to execute you for coming back! Will you try to escape? (Yes or No)");
+
+              if (escapeE === "Yes") {
+
+                alert ("You slip out of the village during the night because your guards got crazy drunk...");
+
+                  forestJ();
+
+              }
+              
+                else{
+                  alert("What is wrong with you?");
+
+                  allDeath();
+                }
             }
 
 
             else{
-              whyThough();
+              alert("You just get horrendously lost and eventually make your way back to your original path...");
+              forestJ();
+            }
+
+          }
+
+          }
+
+          
+
+          
+
+
+          function mountainJ () {
+
+            alert("You start your journey towards the snowy mountains.");
+
+            if (playerRace === "Vampire") {
+             var freezeV = prompt("As you climb into higher altitudes, you notice that your already cold skin is beginning to freeze and movig is becoming quite difficult. Go back or go forward? (Back or Forward)");
+
+              if (freezeV = "Forward") {
+
+                alert("You press forward into the cold weather. One by one, your limbs cease to function. Eventually you freeze over completely, then shatter into a million pieces.");
+
+                signBad();
+
+                  }
+
+          else {
+            alert("You turn back down the mountain, retreating from the cruel blizzard behind you.")
+
+              finalSign();
+
+          }
+                }
+            else if (playerRace === "Elf") {
+              alert("As an elf, you're not built to survive this climate. You have no choice but to turn back...")
+
+              signV();
+
+            }
+
+            else{
+              alert("Being a hardy human, you push yourself through the snow, confident that you can find something of value in the mountains.");
+
+              alert("You near the top of what seems to be the thousandth mountain when the snow beneath your feet starts to shake!");
+
+              var golemAttack = prompt("Suddenly, the ground from under you springs into the air! While you soar through the air, you notice a rock golem coming viciously at you! What do you do?!(Run or fight)");
+
+              if (chooseWeapon === "Armor") {
+
+                alert("You chose to wear armor! It slows your movement so you aren't fast enough to run or attack! The golem then punts you down the mountain. What a bummer.");
+
+                finalSign();
+
+              }
+
+              else if (chooseWeapon === "Sword") {
+                
+                alert("You chose to be crazy cool at the beginning and draw your mighty sword! You engage in a vicious battle in which you eventually conquer the creature!");
+
+                alert("As the creature fades away, a wisp appears out of the center of its chest.")
+              }
+
+              else {
+                
+                alert("Apparently you suck at typing and didn't write your weapon correctly. So the golem kills you.");
+
+                allDeath();
+              }
             }
 
           }
 
 
-          function mountainJ () {
 
-            alert("You start your journey towards the snowy mountains");
+          function finalSign() {
+
+            alert("Kappa Keepo")
+
+
           }
-
-
 
 
 
@@ -342,8 +521,7 @@
             alert("You start on your journey towards the tower.");
           }
         
-          
-          
+
         
 
 
@@ -380,6 +558,14 @@
 
           alert("Game Over.");
         }
+
+        function forestDrakeDeath () {
+
+          alert("You (foolishly) charge at the drake with all your might! It doesn't matter if you chose a sword or armor at the beginning, you get 100% roasted alive.");
+
+          allDeath();
+             
+          }
 
         function whyThough()
           {
