@@ -13,6 +13,8 @@
   <script>
 
     //*************press f1 then open in browser****************
+
+    //type in templar2020 github UVU DGM 1600
       
     //Startup and Character Creation
     
@@ -42,8 +44,8 @@
     
        function vampireStart()
        {
-         alert("Welcome " + playerTag + "! You're a newly transformed vampire who is seeking revenge against the vampire who changed you. You don't remember much of your life before your transformation but it's common knowledge that there's a creature called the Vampire King that resides in a dark tower with dark clouds surrounding it..."); 
-         alert ("Keep in mind that you're much faster and stronger than all the other races. However, due to being a vampire, other characters will most likely dislike you. Make sure you plan accordingly.");
+         alert("Welcome " + playerTag + "! You're a newly transformed vampire who is seeking revenge against the vampire who changed you. You don't remember much of your life before your transformation but it's common knowledge that there's a creature called the Vampire King that resides in a faraway tower with dark clouds surrounding it..."); 
+         alert ("Keep in mind that you're much faster and stronger than all the other races. However, due to being a vampire, other characters and creatures will most likely dislike you. Make sure you plan accordingly.");
          
            var vReady = confirm("Are you ready to begin?");
 
@@ -346,7 +348,7 @@
                   
                   else if (playerRace === "Elf") {
 
-                    alert("Suddenly, a ferret pops out of the underbrush! As an elf, you're delighted by the creature. You start to play with it but almost immediately a large shadow cast over you...");
+                    alert("Suddenly, a ferret pops out of the underbrush! As an elf, you're delighted by the creature. You start to play with it but almost immediately a large shadow is cast over you...");
 
                     var elfDrake = prompt("You slowly look up to see a large, light green forest drake towering over you. What do you do? (Attack, Run, Reason)");
 
@@ -488,14 +490,18 @@
 
               else if (chooseWeapon === "Sword") {
                 
-                alert("You chose to be crazy cool at the beginning and draw your mighty sword! You engage in a vicious battle in which you eventually conquer the creature!");
+                alert("It doesn't matter what you chose! You were crazy cool at the beginning to pick a sword! You draw your mighty sword! You engage in a vicious battle in which you eventually conquer the creature!");
 
-                alert("As the creature fades away, a wisp appears out of the center of its chest.")
+                alert("As the creature fades away, a wisp appears out of the center of its chest. It floats close to your face and you hear a voice in your head.");
+
+                alert("\"Remember the time. Time is the key.\"");
+
+                finalSign();
               }
 
               else {
-                
-                alert("Apparently you suck at typing and didn't write your weapon correctly. So the golem kills you.");
+
+                alert("Apparently you suck at typing and didn't write your weapon correctly. So the golem just straight up kills you.");
 
                 allDeath();
               }
@@ -507,8 +513,22 @@
 
           function finalSign() {
 
-            alert("Kappa Keepo")
+            alert("You arrive back at the sign. You must live with the decisions you made and there's no going back.");
 
+            var finalReady = confirm("Are you ready to go to the tower of the Vampire King?!?!")
+
+            if (finalReady === true) {
+
+              towerJ();
+            }
+
+            else{
+              alert("You really think after all of this that saying no would work?");
+
+              towerJ();
+
+            }
+            
 
           }
 
@@ -518,7 +538,7 @@
 
           function towerJ () {
 
-            alert("You start on your journey towards the tower.");
+            alert("You finally start on your way to the Vampire King's Tower!");
           }
         
 
