@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Choose Wisely </title>
+    <title> The Journey of a Thousand Possibilities </title>
 
       
   </head>
@@ -168,7 +168,7 @@
 
                     alert("You punch the man square in the jaw and he stumbles back into a table, and another group of men begins to pummel the man mercilessly. You turn to leave, but the sketchy man is suddenly next to you.");
 
-                    alert("\"Remember my friend, the key is the time. Time is the key. Don't forget.\"");
+                    alert("\"Remember my friend, the key is 'Time'. 'Time'' is the key. Don't forget.\"");
 
                     alert("The man slowly goes back to his corner and you walk back out into the square.");
 
@@ -276,7 +276,10 @@
               signV();
             }
             else{
-              whyThough();
+
+              alert("Learn to type...")
+              
+              signV();
             }
           }
 
@@ -285,27 +288,31 @@
             var journey2 = prompt ("You arrive back at the sign outside the village. In the distance you see a dense forest, snowy mountains to the north and the village behind you. However, due to your decisions you can't go back to the village. You can also see the Vampire Kings fortress, but you feel that you aren't ready to handle that task quite yet... Which do you travel towards? (Forest, Mountains, Tower)");
           
 
-          if (journey2 === "Forest") {
+            switch (journey2){
+              case "Forest":
               forestJ();
-            }
+             break; 
+            
 
-            else if (journey2 === "Mountains") {
+            case "Mountains": 
               mountainJ();
-            }
+            break;
+            
 
-            else if (journey2 === "Tower") {
+            case "Tower":
 
               alert("You clearly can't make good decisions can you? Go back to the sign.");
 
               signV();
-            }
-            else{
+              break;
+            
+            default :
               alert("Seriously? Learn to type...");
 
               signBad();
             }
-          }
-
+          
+      }
 
           function forestJ () {
 
@@ -364,7 +371,7 @@
 
                           alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember the time my young friend " + playerTag + ". The time is key.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". 'Time' is the key.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -397,7 +404,7 @@
 
                       alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember the time my young friend " + playerTag + ". The time is key.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". 'Time' is the key.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -494,14 +501,14 @@
 
                 alert("As the creature fades away, a wisp appears out of the center of its chest. It floats close to your face and you hear a voice in your head.");
 
-                alert("\"Remember the time. Time is the key.\"");
+                alert("\"Remember, 'Time'. 'Time' is the key.\"");
 
                 finalSign();
               }
 
               else {
 
-                alert("Apparently you suck at typing and didn't write your weapon correctly. So the golem just straight up kills you.");
+                alert("Apparently you suck at typing and didn't write your weapon correctly at the beginning. So the golem just straight up kills you.");
 
                 allDeath();
               }
@@ -513,7 +520,7 @@
 
           function finalSign() {
 
-            alert("You arrive back at the sign. You must live with the decisions you made and there's no going back.");
+            alert("You arrive back at the sign. You must live with the decisions you've made and there's no going back.");
 
             var finalReady = confirm("Are you ready to go to the tower of the Vampire King?!?!")
 
@@ -523,6 +530,7 @@
             }
 
             else{
+
               alert("You really think after all of this that saying no would work?");
 
               towerJ();
@@ -539,8 +547,81 @@
           function towerJ () {
 
             alert("You finally start on your way to the Vampire King's Tower!");
+
+            alert("You start your trek towards the tower, and surprisingly have little to no difficulty getting there. Upon arriving a kilometer to the tower, a storm slowly seems to descend from the dark clouds circling the tower.");
+
+            alert("Slowly, winds begin to push you forward, then pull you back. You stuggle helplessly as the wind seems to target your every movement and tries to counteract it.");
+
+            var struggleOrNah = prompt("You begin to feel as though the storm will eventually consume you. You suddenly have a wave of resolution! You will not die in this storm! What do you do? (Continue, Rest, Leave)");
+
+            if (struggleOrNah === "Continue") {
+
+              alert("You summon all of your will and press forward into the darkness, determined to succeed!");
+
+            stormRandom();
+
+          }
+
+            else if (struggleOrNah === "Rest") {
+
+              alert("Well... Just kidding your determination apparently dissolves and you fall to the ground to take a nap? Then the clouds absorb you into the endless abyss that there's no escape from...");
+
+              allDeath();
+
+            }
+
+            else {
+
+              alert("Okay, let's run it back. You make really awful decisions.");
+
+              towerJ();
+
+            }
+
           }
         
+        function stormRandom() {
+
+            var storm = new Array();
+                      storm[0]="You push through and arrive on the other side of the storm!";
+                      storm[1]="A time traveling wizard arrives and decides to send you back to the beginning of your journey!";
+                      storm[2]="A sudden gust pushes you off your feet! You don't know where it might take you...";
+                      storm[3]="The storm just kinda... Disappears? Almost as like an outside source stopped the storm...";
+
+                        var stormScary = storm[Math.floor(Math.random() * storm.length)];
+
+              if(stormScary=="You push through and arrive on the other side of the storm!")
+
+              {
+                towerStart();
+              }
+
+              else if(stormScary=="A time traveling wizard arrives and decides to send you back to the beginning of your journey!") 
+
+              {
+                  startGame();
+              }
+
+              else if(stormScary=="A sudden gust pushes you off your feet! You don't know where it might take you...") 
+              {
+
+                alert("You're thrown to the ground, but the storm seems to have vanished...")
+
+                towerStart();
+              }
+
+              else 
+
+              towerStart();
+                        
+                             }
+
+
+        function towerStart() {
+
+            alert("PRAISES")
+
+        }
 
         
 
