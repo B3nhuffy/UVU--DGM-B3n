@@ -168,7 +168,7 @@
 
                     alert("You punch the man square in the jaw and he stumbles back into a table, and another group of men begins to pummel the man mercilessly. You turn to leave, but the sketchy man is suddenly next to you.");
 
-                    alert("\"Remember my friend, the key is 'Time'. 'Time'' is the key. Don't forget.\"");
+                    alert("\"Remember my friend, the key is 'Time', yet also the time is backwards. Don't forget.\"");
 
                     alert("The man slowly goes back to his corner and you walk back out into the square.");
 
@@ -371,7 +371,7 @@
 
                           alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember 'Time' my young friend " + playerTag + ". 'Time' is the key.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time is backwards.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -404,7 +404,7 @@
 
                       alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember 'Time' my young friend " + playerTag + ". 'Time' is the key.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time is backwards.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -445,9 +445,6 @@
           }
 
           }
-
-          
-
           
 
 
@@ -501,7 +498,9 @@
 
                 alert("As the creature fades away, a wisp appears out of the center of its chest. It floats close to your face and you hear a voice in your head.");
 
-                alert("\"Remember, 'Time'. 'Time' is the key.\"");
+                alert("\"Remember, 'Time'. Yet also the time is backwards.\"");
+
+                alert("A loud gust of wind runs over you and you cover your eyes. Upon opening them, you realize that you have suddenly been teleported back down the mountain!")
 
                 finalSign();
               }
@@ -619,7 +618,30 @@
 
         function towerStart() {
 
-            alert("PRAISES")
+            alert("On your hands and knees, you try to catch your breath. Once you've recovered, you look up to see a beautiful white tower protruding from the earth. Surrounding you is a beautiful countryside, with green rolling hills with horses peacefully grazing and beautifully well kept garden. At the base of the tower, you see a small door which seems to be the only entrance to the tower.");
+
+            var doorWalk = prompt("With your mouth hitting the dirt, you walk towards the door but wonder if there's another way in. What do you do? (Door, Search)");
+
+            if (doorWalk === "Door"){
+
+              alert("Catching your breath, you hesitate. Letting out a breath filled with nerves, excitement and fear, you push open the door and walk into the tower.");
+
+              insideTower();
+            }
+
+            else {
+
+              alert("You walk the borders of the tower, yet no other openings seem to be available. Catching your breath, you hesitate. Letting out a breath filled with nerves, excitement and fear, you push open the door and walk into the tower.");
+
+                  insideTower();
+
+            }
+
+            function insideTower() {
+
+                
+
+            }
 
         }
 
