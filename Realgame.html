@@ -168,7 +168,7 @@
 
                     alert("You punch the man square in the jaw and he stumbles back into a table, and another group of men begins to pummel the man mercilessly. You turn to leave, but the sketchy man is suddenly next to you.");
 
-                    alert("\"Remember my friend, the key is 'Time', yet also the time is backwards. Don't forget.\"");
+                    alert("\"Remember my friend, the key is 'Time', yet also the time backwards. Don't forget.\"");
 
                     alert("The man slowly goes back to his corner and you walk back out into the square.");
 
@@ -371,7 +371,7 @@
 
                           alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time is backwards.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time backwards.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -404,7 +404,7 @@
 
                       alert("Before you can do anything, the drake looks you in the eye. Suddenly, your mind and the dragons merge for a mere second. In that brief moment, you hear a voice in your head.");
 
-                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time is backwards.\"");
+                          alert("\"Remember 'Time' my young friend " + playerTag + ". Yet also the time backwards.\"");
 
                           alert("As you recover from this encounter, the ferret scurries into the underbrush, the drake in tow. In the last moment before it disappears, you swear you see the drake wink back at you.");
 
@@ -442,6 +442,10 @@
               forestJ();
             }
 
+          }
+
+          else {
+            forestJ();
           }
 
           }
@@ -482,7 +486,7 @@
 
               alert("You near the top of what seems to be the thousandth mountain when the snow beneath your feet starts to shake!");
 
-              var golemAttack = prompt("Suddenly, the ground from under you springs into the air! While you soar through the air, you notice a rock golem coming viciously at you! What do you do?!(Run or fight)");
+              var golemAttack = prompt("Suddenly, the ground from under you springs into the air! While you soar through the air, you notice a rock golem coming viciously at you! What do you do?! (Run or fight)");
 
               if (chooseWeapon === "Armor") {
 
@@ -498,7 +502,7 @@
 
                 alert("As the creature fades away, a wisp appears out of the center of its chest. It floats close to your face and you hear a voice in your head.");
 
-                alert("\"Remember, 'Time'. Yet also the time is backwards.\"");
+                alert("\"Remember, 'Time'. Yet also the time backwards.\"");
 
                 alert("A loud gust of wind runs over you and you cover your eyes. Upon opening them, you realize that you have suddenly been teleported back down the mountain!")
 
@@ -592,12 +596,17 @@
               if(stormScary=="You push through and arrive on the other side of the storm!")
 
               {
+
+                alert ("You push through and arrive on the other side of the storm!");
+
                 towerStart();
               }
 
               else if(stormScary=="A time traveling wizard arrives and decides to send you back to the beginning of your journey!") 
 
               {
+
+                alert("A time traveling wizard arrives and decides to send you back to the beginning of your journey!");
                   startGame();
               }
 
@@ -609,16 +618,18 @@
                 towerStart();
               }
 
-              else 
+              else {
+
+                alert("The storm just kinda... Disappears? Almost as like an outside source stopped the storm...");
 
               towerStart();
-                        
+              }
                              }
 
 
         function towerStart() {
 
-            alert("On your hands and knees, you try to catch your breath. Once you've recovered, you look up to see a beautiful white tower protruding from the earth. Surrounding you is a beautiful countryside, with green rolling hills with horses peacefully grazing and beautifully well kept garden. At the base of the tower, you see a small door which seems to be the only entrance to the tower.");
+            alert("On your hands and knees, you try to catch your breath. Once you've recovered, you look up to see a beautiful white tower protruding from the earth. Surrounding you is a beautiful countryside, with green rolling hills with horses peacefully grazing and a neatly well kept garden. You also see many different members of different races toiling around the tower. At the base of the tower, you see a small door which seems to be the only entrance to the tower.");
 
             var doorWalk = prompt("With your mouth hitting the dirt, you walk towards the door but wonder if there's another way in. What do you do? (Door, Search)");
 
@@ -631,7 +642,7 @@
 
             else {
 
-              alert("You walk the borders of the tower, yet no other openings seem to be available. Catching your breath, you hesitate. Letting out a breath filled with nerves, excitement and fear, you push open the door and walk into the tower.");
+              alert("You walk the perimeter of the tower, yet no other openings seem to be available. Catching your breath, you hesitate. Letting out a breath filled with nerves, excitement and fear, you push open the door and walk into the tower.");
 
                   insideTower();
 
@@ -639,12 +650,112 @@
 
             function insideTower() {
 
+                alert("You victoriously walk into the tower, expecting it to be as glorious as the outside. You're instead greeted by a small, insignificant room. Confused, you walk out the door. Then back in. Then out again. Then back in.");
+
+                finalStop();
                 
 
             }
 
         }
 
+          var room = "Final Room";
+
+var room = {
+  clock:"The old clock doesn't seem to work anymore. You closely examine the layers of dust and cobwebs. The words \"Verum Responsum\" is etched into the side. The time reads 7:52. \n",
+  dragonhead:"\nThere's a large golden dragon head mounted on the wall. You inspect it, but there doesn't seem to be anything special about it... \n",
+  orb:"\nYou gaze deep into the orb. Your journey flashes before eyes. Somewhere in the mix of images, you seeem to remember that you were supposed to remember something. What could it be? \n",
+  falsenote:"\nYou pick up the note sitting on the desk. It reads, \"The color of the creature is key.\""
+  
+  };
+
+function checkRoom(){
+
+    var room = "Final Room";
+
+var room = {
+  clock:"The old clock doesn't seem to work anymore. You closely examine the layers of dust and cobwebs. The words \"Verum Responsum\" are etched into the side. The time reads 7:52. \n",
+  dragonhead:"\nThere's a large golden dragon head mounted on the wall. You inspect it, but there doesn't seem to be anything special about it... \n",
+  orb:"\nYou gaze deep into the orb. Your journey flashes before eyes. Somewhere in the mix of images, you seem to recall that you were supposed to remember something... The 'key...' What could it be? \n",
+  falsenote:"\nYou pick up the note sitting on the desk. It reads, \"The color of the creature is key.\""
+  
+  };
+
+  alert(
+    room.clock +
+    room.dragonhead +
+    room.orb +
+    room.falsenote
+    
+  )
+
+  finalStop();
+}
+
+function finalStop (){
+
+alert("The door shuts behind you and suddenly a loud voice booms throughout the room! \"You have been given all you need to succeed. Now tell me, what is the 'key?'\"");
+var finalAnswer = prompt("What do you answer? (*Insert answer* or Check Room)");
+
+if(finalAnswer =="Check Room"){
+ checkRoom();
+}
+
+else if(finalAnswer=="Golden"){
+   
+   alert("You hear the voice begin to chuckle, then to laugh openly. \"Do you really think it would be that simple?\" it asked.");
+
+   alert("Your journey has taught you nothing, enjoy your fate!");
+
+   alert("You feel a strange tingling in your body, which slowly becomes more and more painful. You eventually black out. Next thing you know, you're mounted on the wall. Another dragonhead, to confuse the next unfortunate traveler...");
+
+   allDeath();
+
+}
+
+else if (finalAnswer =="Time") {
+
+  bestEnding();      
+
+}
+
+else if (finalAnswer =="7:52") {
+
+  alert("\"Very good!\" the voice says in delight. \"You may be a worthy servant!\"");
+
+  alert("An unseen force pushes you out the door and it shuts behind you. You see a worker who is also " + playerRace + "-kin with their eyes wide with terror.");
+
+  alert("They slowly fade into nothingness... You take their place taking care of the land around the castle. Deep in your heart, you know that the true answer eluded you.");
+
+  alert("You live out your days in fear, waiting for the day that your replacement arrives...");
+
+  goodDeath();
+
+}
+
+else if (finalAnswer =="2:57") {
+
+  bestEnding();
+
+}
+
+else 
+  {
+    alert("That doesn't seem quite right...");  
+
+    finalStop();
+      
+  }
+
+}
+
+function bestEnding() {
+
+alert("There's a long pause. A secret passage behind the dragonhead begins to slide open.");
+
+  alert("A massive throne room is revealed. Stepping into the room you see ")
+
+}
         
 
 
@@ -680,6 +791,12 @@
         function allDeath () {
 
           alert("Game Over.");
+        }
+
+        function goodDeath () {
+
+          alert("The End.")
+
         }
 
         function forestDrakeDeath () {
