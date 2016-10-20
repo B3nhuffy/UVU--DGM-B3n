@@ -457,13 +457,13 @@
             alert("You start your journey towards the snowy mountains.");
 
             if (playerRace === "Vampire") {
-             var freezeV = prompt("As you climb into higher altitudes, you notice that your already cold skin is beginning to freeze and movig is becoming quite difficult. Go back or go forward? (Back or Forward)");
+             var freezeV = prompt("As you climb into higher altitudes, you notice that your already cold skin is beginning to freeze and moving is becoming quite difficult. Go back or go forward? (Back or Forward)");
 
-              if (freezeV = "Forward") {
+              if (freezeV === "Forward") {
 
                 alert("You press forward into the cold weather. One by one, your limbs cease to function. Eventually you freeze over completely, then shatter into a million pieces.");
 
-                signBad();
+                allDeath();
 
                   }
 
@@ -553,7 +553,7 @@
 
             alert("You start your trek towards the tower, and surprisingly have little to no difficulty getting there. Upon arriving a kilometer to the tower, a storm slowly seems to descend from the dark clouds circling the tower.");
 
-            alert("Slowly, winds begin to push you forward, then pull you back. You stuggle helplessly as the wind seems to target your every movement and tries to counteract it.");
+            alert("Slowly, winds begin to push you forward, then pull you back. You struggle helplessly as the wind seems to target your every movement and tries to counteract it.");
 
             var struggleOrNah = prompt("You begin to feel as though the storm will eventually consume you. You suddenly have a wave of resolution! You will not die in this storm! What do you do? (Continue, Rest, Leave)");
 
@@ -753,8 +753,81 @@ function bestEnding() {
 
 alert("There's a long pause. A secret passage behind the dragonhead begins to slide open.");
 
-  alert("A massive throne room is revealed. Stepping into the room you see ")
+  alert("A massive throne room is revealed. Stepping into the room you see large stained glass windows along the walls. There are beautiful crystal chandeliers hanging from the ceiling.");
 
+  alert("At the very end, lies the throne. The Vampire King sits upon it, sizing you up and still clearly in shock that you could figure out his puzzle.");
+
+      if (playerRace === "Vampire") {
+
+        alert("You feel a feral anger begin to rise inside of you as you stare at the creature that stole your humanity from you.");
+
+        var vampireKill = prompt("You stop short of the King. You stare each other down, no words passing between the two of you. What do you do? (Attack, Speak)");
+
+          if (vampireKill === "Attack") {
+
+              alert("The Vampire King opens his mouth to speak, but already you're upon him. Tearing at him with claws and teeth, you feel your rage take control of you. He quickly tries to push you away, but the ferocity of your attack has toppled him from his throne!");
+
+                var howKill = prompt("The kings head rests on the floor. You know that he's at your mercy. What do you do? (Spare, Execute)");
+
+                  if (howKill === "Spare") {
+
+                      alert("You stand over the creature panting. You slowly feel your rage draining from your body and you collapse to the floor. Looking up at the ceiling, you wonder what you've become. Suddenly, you feel a sharp pain as the king quickly throws himself upon you. He brings his teeth to your neck and...");
+
+                      allDeath();
+
+                  }
+ 
+                  else {
+
+                    alert("You kneel down at the side of the king. Terror stems from his eyes as you take the final bite from his throat. You feel his power flow into your body.");
+
+                    alert("You walk to the throne and stare out the window. The reign of " + playerTag + " Vampire Slayer. Vampire Monarch.");
+
+                    goodDeath();
+
+                  }
+
+          }
+
+          else {
+
+              alert("You wait for the king to speak to you. He opens his mouth into a smirk then right as you think he's about he leaps upon you, teeth at your throat and...");
+              
+              allDeath();
+
+                        }
+
+      }
+
+
+      
+
+      else {
+
+        alert("As you walk closer to the vampire, you begin to make out the features of the ancient creature. Long flowing silver hair, angled features almost like an elf, and broad shoulders made the king look almost handsome. However, his eyes were such a dark red that you could almost feel the ancient cruelty behind them.");
+
+        alert("You see that he can't move from his throne, or even speak. You walk around him and his eyes follow you everywhere you go.");
+
+          var maybeDeath = prompt("You smile confidently. You can feel the throne emanating pure power. You can either touch the throne, or the kings hand. Which do you touch? (Throne or Hand)");
+
+            if (maybeDeath === "Throne") {
+
+              alert("The throne glows brightly and the vampire king slowly fades away. You take his seat and feel the power within yourself. You finally did it. You are " + playerTag + ". Vampire Slayer. Owner of all that was his.");
+
+              goodDeath();
+
+            }
+
+            else {
+
+              alert("You choose to touch the kings hand. His face widens into a smile as he absorbs your life force. As you slowly slip to the ground, you see him rise from off the throne. Young and full of life, the Vampire King is once again allowed to terrorize this land. And it's your fault.");
+
+              allDeath();
+            }
+
+
+
+      }
 }
         
 
